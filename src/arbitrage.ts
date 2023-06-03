@@ -28,10 +28,10 @@ function calculatePathWeight(g, cycle) {
     let endVertex = g.getVertexByKey(cycle[indexNext]);
     let edge = g.findEdge(startVertex, endVertex);
 
-    // console.log(`Start: ${startVertex.value} | End: ${endVertex.value}`)
-    // console.log(`Adj edge weight: ${edge.weight} | Raw edge weight: ${edge.rawWeight} | ${edge.getKey()}`);
-    // console.log(`DEX: ${edge.metadata.dex}`)
-    // console.log(cycleWeight * edge.rawWeight)
+    console.log(`Start: ${startVertex.value} | End: ${endVertex.value}`)
+    console.log(`Adj edge weight: ${edge.weight} | Raw edge weight: ${edge.rawWeight} | ${edge.getKey()}`);
+    console.log(`DEX: ${edge.metadata.dex}`)
+    console.log(cycleWeight * edge.rawWeight)
 
     cycleWeight *= edge.rawWeight;
   }
